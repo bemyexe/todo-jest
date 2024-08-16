@@ -1,0 +1,20 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  transition: all 0.1s;
+
+  &.primary {
+    padding: 8px;
+    background: var(--blue);
+    border: 1px solid var(--black);
+    border-radius: 8px;
+
+    &:hover {
+      opacity: 0.95;
+    }
+
+    &:active {
+      background: var(--blueDark);
+    }
+  }
+}
