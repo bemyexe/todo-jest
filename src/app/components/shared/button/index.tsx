@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import './style.css';
 
-type ButtonVariant = 'primary' | 'secondary';
+type ButtonVariant = 'filled' | 'transparent';
 
 interface ButtonProps extends ComponentProps<'button'> {
   variant: ButtonVariant;

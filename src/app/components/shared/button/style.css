@@ -1,20 +1,26 @@
 .button {
   cursor: pointer;
   display: flex;
-  transition: all 0.1s;
+  transition: all 0.2s;
+  padding: 8px;
 
-  &.primary {
-    padding: 8px;
-    background: var(--blue);
+  &.filled {
+    background: var(--grayLight);
     border: 1px solid var(--black);
     border-radius: 8px;
 
-    &:hover {
-      opacity: 0.95;
-    }
-
     &:active {
-      background: var(--blueDark);
+      background: var(--gray);
+      transform: translateY(1px);
+    }
+  }
+
+  &.transparent {
+    background: transparent;
+
+    &:hover {
+      background: var(--grayLight);
+      border-radius: 8px;
     }
   }
 }
