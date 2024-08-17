@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { FilterTodos, Todo } from '../../@types';
 
-import { TodoFilters, TodoList, TodoPanel } from './components';
+import { Button, TodoFilters, TodoList, TodoPanel } from './components';
 
 import './style.css';
 
@@ -38,6 +38,10 @@ export const App = () => {
     setFilter(newFilter);
   };
 
+  const handleClearCompleted = () => {
+    setTodos(todos.filter((todo) => !todo.completed));
+  };
+
   const filteredTodos = todos.filter((todo: Todo) => {
     const map = {
       all: true,
@@ -52,12 +56,21 @@ export const App = () => {
     0
   );
 
+  const itemsCompletedLeft = todos.find((todo) => todo.completed === true);
+
   return (
     <div className="app-wrapper">
       <div className="app-content">
         <TodoPanel handleAddTodo={handleAddTodo} />
         <TodoFilters filter={filter} handleFilterChange={handleFilterChange} />
-        <p>{itemsLeft} items left</p>
+        <p>{itemsLeft} items left </p>
+        {itemsCompletedLeft && (
+          <Button
+            variant="filled"
+            onClick={handleClearCompleted}
+            children="Clear completed"
+          />
+        )}
         <TodoList todos={filteredTodos} handleToggleTodo={handleToggleTodo} />
       </div>
     </div>
