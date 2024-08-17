@@ -1,0 +1,17 @@
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  .input {
+    padding: 8px;
+    border: 1px solid var(--black);
+    border-radius: 8px;
+
+    &::placeholder {
+      font-style: italic;
+    }
+  }
+}
