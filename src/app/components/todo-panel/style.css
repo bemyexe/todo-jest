@@ -1,0 +1,4 @@
+.todo-panel {
+  display: flex;
+  gap: 8px;
+}
