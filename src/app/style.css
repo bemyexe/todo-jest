@@ -1,0 +1,16 @@
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  .app-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 15px;
+  }
+}
