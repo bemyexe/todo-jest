@@ -24,6 +24,7 @@
 
   &.transparent {
     background: transparent;
+    border: 1px solid var(--white);
 
     &:hover {
       background: var(--grayLight);
