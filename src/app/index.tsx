@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { FilterTodos, Todo } from '../../@types';
 
@@ -7,9 +8,9 @@ import { Button, TodoFilters, TodoList, TodoPanel } from './components';
 import './style.css';
 
 const DEFAULT_TODOS: Todo[] = [
-  { id: 1, title: 'Buy milk', completed: false },
-  { id: 2, title: 'Walk the dog', completed: true },
-  { id: 3, title: 'Do laundry', completed: false },
+  { id: '1', title: 'Buy milk', completed: false },
+  { id: '2', title: 'Walk the dog', completed: true },
+  { id: '3', title: 'Do laundry', completed: false },
 ];
 
 const DEFAULT_FILTER = 'all';
@@ -20,7 +21,7 @@ export const App = () => {
   const [filter, setFilter] = useState<FilterTodos>(DEFAULT_FILTER);
 
   const handleAddTodo = (title: Todo['title']) => {
-    setTodos([...todos, { id: todos.length + 1, title, completed: false }]);
+    setTodos([...todos, { id: uuidv4(), title, completed: false }]);
   };
 
   const handleToggleTodo = (id: Todo['id']) => {
