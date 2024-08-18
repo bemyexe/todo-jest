@@ -13,6 +13,13 @@
       background: var(--gray);
       transform: translateY(1px);
     }
+
+    &:disabled {
+      opacity: 0.8;
+      cursor: auto;
+      transform: none;
+      background: none;
+    }
   }
 
   &.transparent {

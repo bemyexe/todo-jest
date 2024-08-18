@@ -64,13 +64,13 @@ export const App = () => {
         <TodoPanel handleAddTodo={handleAddTodo} />
         <TodoFilters filter={filter} handleFilterChange={handleFilterChange} />
         <p>{itemsLeft} items left </p>
-        {itemsCompletedLeft && (
-          <Button
-            variant="filled"
-            onClick={handleClearCompleted}
-            children="Clear completed"
-          />
-        )}
+        <Button
+          variant="filled"
+          onClick={handleClearCompleted}
+          children="Clear completed"
+          disabled={!itemsCompletedLeft}
+          title="Clear completed"
+        />
         <TodoList todos={filteredTodos} handleToggleTodo={handleToggleTodo} />
       </div>
     </div>
