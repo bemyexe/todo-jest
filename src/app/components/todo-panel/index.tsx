@@ -33,14 +33,10 @@ export const TodoPanel = ({ className, handleAddTodo }: TodoPanelProps) => {
         label="Add todo"
         value={value}
         onChange={handleChange}
-        title="Напишите новое дело"
+        title="Write a new todo"
+        placeholder="Write a new todo"
       />
-      <Button
-        variant="filled"
-        type="submit"
-        title="Добавить"
-        children="Добавить"
-      />
+      <Button variant="filled" type="submit" title="Add" children="Add" />
     </form>
   );
 };
