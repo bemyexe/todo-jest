@@ -7,11 +7,7 @@ import { Button, TodoFilters, TodoList, TodoPanel } from './components';
 
 import './style.css';
 
-const DEFAULT_TODOS: Todo[] = [
-  { id: '1', title: 'Buy milk', completed: false },
-  { id: '2', title: 'Walk the dog', completed: true },
-  { id: '3', title: 'Do laundry', completed: false },
-];
+const DEFAULT_TODOS: Todo[] = [];
 
 const DEFAULT_FILTER = 'all';
 
